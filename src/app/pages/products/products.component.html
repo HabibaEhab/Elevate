@@ -1,0 +1,45 @@
+<section>
+  <h2 class="text-5xl text-center font-semibold text-[#8b5e35]">Products</h2>
+
+  <input [(ngModel)]="search" type="email" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#8b5e35] focus:border-[#8b5e35] block w-1/2 mx-auto my-4 p-2.5 ">
+  <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+
+      @for(prod of products | search:search ; track prod.id){
+          <div class=" card border  rounded-md overflow-hidden shadow relative hover:shadow-[#947c62] hover:shadow-xl transition-all duration-500">
+              <div  [routerLink]="['/details', prod.id]">
+
+                <div class="card-img">
+                  <img [src]="prod.image" class="w-full h-[250px] object-contain" [alt]="prod.title" />
+                </div>
+
+                <div class="card-body px-2 py-4">
+                  <h3 class="font-medium">{{prod.title.split(' ',2).join(' ')}}</h3>
+                  <p class="font-normal text-sm">{{prod.description.split(' ',5).join(' ')}}</p>
+                  
+                  <div class="flex justify-between items-center">
+                    <span>{{prod.price}} EGP</span>
+                    <div class="flex items-center">
+                      <i class="fas fa-star text-yellow-300"></i>
+                      <span class="text-gray-500">{{prod.rating.rate}}</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+             
+            </div>
+
+      }
+
+
+  </div>
+  
+</section>
+
+
+
+
+
+

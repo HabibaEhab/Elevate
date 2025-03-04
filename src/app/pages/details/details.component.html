@@ -1,0 +1,40 @@
+<section class="">
+    <h2 class="text-5xl text-center font-semibold text-[#8b5e35] mb-5">Details</h2>
+    
+    <div class=" rounded-md overflow-hidden shadow relative ">
+        @if(productDetails){
+
+            <div class=" gap-5 flex-col items-center p-2">
+        
+                <div class="w-1/4 object-contain mx-auto">
+            
+                    <img [src]="productDetails.image" class="w-full object-contain mb-2 rounded-md overflow-hidden shadow-md relative" [alt]="productDetails.title">
+            
+                </div>
+            
+                <div class="w-3/4 mx-auto">
+            
+                    <h2 class="text-3xl font-normal text-[#9b7e5c]">{{productDetails.title}}</h2>
+                    <h3 class="font-normal text-gray-500">{{productDetails.category}}</h3>
+
+                    <p class="font-medium">{{productDetails.description}}</p>
+            
+            
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg text-gray-800">Price: {{productDetails.price}} EGP</span>
+                        <div class="flex items-center">
+                          <i class="fas fa-star text-yellow-300"></i>
+                          <span class="text-gray-500">{{productDetails.rating.rate}}</span>
+                        </div>
+                    </div>
+            
+                    
+            
+                </div>
+            
+            </div>
+        
+        }
+    </div>
+
+</section>
