@@ -4,12 +4,12 @@ import { IProduct } from '../../shared/interfaces/iproduct';
 import { SearchPipe } from '../../shared/pipes/search/search.pipe';
 import { FormsModule } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { CommonModule, CurrencyPipe, isPlatformBrowser } from '@angular/common';
 
 
 @Component({
   selector: 'app-products',
-  imports: [SearchPipe,FormsModule,RouterLink, CommonModule],
+  imports: [SearchPipe,CurrencyPipe,FormsModule,RouterLink, CommonModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })

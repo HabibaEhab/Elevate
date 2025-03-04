@@ -2,12 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../../core/services/products/products.service';
 import { IProduct } from '../../shared/interfaces/iproduct';
+import { CurrencyPipe } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-details',
-  imports: [],
+  imports: [CurrencyPipe],
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })

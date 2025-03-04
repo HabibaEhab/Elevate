@@ -21,7 +21,7 @@
             
             
                     <div class="flex justify-between items-center">
-                        <span class="text-lg text-gray-800">Price: {{productDetails.price}} EGP</span>
+                        <span class="text-lg text-gray-800">Price: {{productDetails.price | currency:'EGP'}} </span>
                         <div class="flex items-center">
                           <i class="fas fa-star text-yellow-300"></i>
                           <span class="text-gray-500">{{productDetails.rating.rate}}</span>

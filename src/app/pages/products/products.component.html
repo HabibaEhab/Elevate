@@ -17,7 +17,7 @@
                   <p class="font-normal text-sm">{{prod.description.split(' ',5).join(' ')}}</p>
                   
                   <div class="flex justify-between items-center">
-                    <span>{{prod.price}} EGP</span>
+                    <span>{{prod.price |currency:'EGP'}}</span>
                     <div class="flex items-center">
                       <i class="fas fa-star text-yellow-300"></i>
                       <span class="text-gray-500">{{prod.rating.rate}}</span>
